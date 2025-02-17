@@ -3,7 +3,7 @@ import json
 import platform
 
 from dataclasses import dataclass
-from typing import Any, Union, cast
+from typing import Any, Optional, Union, cast
 
 from swebench.harness.constants import (
     DEFAULT_DOCKER_SPECS,
@@ -45,7 +45,7 @@ class TestSpec:
     # base_docker_specs contains configuration parameters passed to the base Dockerfile template
     base_docker_specs: dict[str, str]
     docker_specs: dict
-    namespace: str
+    namespace: Optional[str]
     base_image_tag: str = LATEST
     env_image_tag: str = LATEST
     instance_image_tag: str = LATEST
@@ -154,7 +154,7 @@ class TestSpec:
 
 def get_test_specs_from_dataset(
     dataset: Union[list[SWEbenchInstance], list[TestSpec]],
-    namespace: str = None,
+    namespace: Optional[str] = None,
     instance_image_tag: str = LATEST,
 ) -> list[TestSpec]:
     """
@@ -172,7 +172,7 @@ def get_test_specs_from_dataset(
 
 def make_test_spec(
     instance: SWEbenchInstance,
-    namespace: str = None,
+    namespace: Optional[str] = None,
     base_image_tag: str = LATEST,
     env_image_tag: str = LATEST,
     instance_image_tag: str = LATEST,
