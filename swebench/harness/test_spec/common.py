@@ -59,9 +59,10 @@ def make_eval_script_list_common(instance, specs, env_name, repo_directory, base
     else:
         reset_tests_command = f'echo "No test files to reset"'
 
-    apply_test_patch_command = (
-        f"git apply --verbose --reject - <<'{HEREDOC_DELIMITER}'\n{test_patch}\n{HEREDOC_DELIMITER}"
-    )
+    apply_test_patch_command = f"git apply --verbose --reject - <<'{HEREDOC_DELIMITER}'\n{test_patch}\n{HEREDOC_DELIMITER}"
+    build_commands = []
+    if "build" in specs:
+        build_commands.extend(specs["build"])
     test_commands = get_test_cmds(instance)
     eval_commands = [
         f"cd {repo_directory}",
@@ -73,6 +74,7 @@ def make_eval_script_list_common(instance, specs, env_name, repo_directory, base
         # f"git -c core.fileMode=false diff {base_commit}",
         reset_tests_command,
         apply_test_patch_command,
+        *build_commands,
         f": '{START_TEST_OUTPUT}'",
         *test_commands,
         f": '{END_TEST_OUTPUT}'",
