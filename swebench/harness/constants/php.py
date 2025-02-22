@@ -1,7 +1,6 @@
 # Constants - Task Instance Installation Environment
 SPECS_PHPSPREADSHEET = {
     "4313": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -9,7 +8,6 @@ SPECS_PHPSPREADSHEET = {
         ],
     },
     "4214": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -17,7 +15,6 @@ SPECS_PHPSPREADSHEET = {
         ],
     },
     "4186": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -25,7 +22,6 @@ SPECS_PHPSPREADSHEET = {
         ],
     },
     "4114": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -33,7 +29,6 @@ SPECS_PHPSPREADSHEET = {
         ],
     },
     "3940": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -41,7 +36,6 @@ SPECS_PHPSPREADSHEET = {
         ],
     },
     "3903": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -49,7 +43,6 @@ SPECS_PHPSPREADSHEET = {
         ],
     },
     "3570": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -57,7 +50,6 @@ SPECS_PHPSPREADSHEET = {
         ],
     },
     "3463": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -65,7 +57,6 @@ SPECS_PHPSPREADSHEET = {
         ],
     },
     "3469": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -73,7 +64,6 @@ SPECS_PHPSPREADSHEET = {
         ],
     },
     "3659": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -84,7 +74,6 @@ SPECS_PHPSPREADSHEET = {
 
 SPECS_LARAVEL_FRAMEWORK = {
     "53914": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -92,7 +81,6 @@ SPECS_LARAVEL_FRAMEWORK = {
         ],
     },
     "53206": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -100,7 +88,6 @@ SPECS_LARAVEL_FRAMEWORK = {
         ],
     },
     "52866": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -108,7 +95,6 @@ SPECS_LARAVEL_FRAMEWORK = {
         ],
     },
     "52684": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -116,7 +102,6 @@ SPECS_LARAVEL_FRAMEWORK = {
         ],
     },
     "52680": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -124,7 +109,6 @@ SPECS_LARAVEL_FRAMEWORK = {
         ],
     },
     "52451": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -132,7 +116,6 @@ SPECS_LARAVEL_FRAMEWORK = {
         ],
     },
     "53949": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -140,7 +123,6 @@ SPECS_LARAVEL_FRAMEWORK = {
         ],
     },
     "51890": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -148,7 +130,6 @@ SPECS_LARAVEL_FRAMEWORK = {
         ],
     },
     "51195": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -156,7 +137,6 @@ SPECS_LARAVEL_FRAMEWORK = {
         ],
     },
     "48636": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -164,7 +144,6 @@ SPECS_LARAVEL_FRAMEWORK = {
         ],
     },
     "48573": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -172,7 +151,6 @@ SPECS_LARAVEL_FRAMEWORK = {
         ],
     },
     "46234": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -180,7 +158,6 @@ SPECS_LARAVEL_FRAMEWORK = {
         ],
     },
     "53696": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -191,7 +168,6 @@ SPECS_LARAVEL_FRAMEWORK = {
 
 SPECS_PHP_CS_FIXER = {
     "8367": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -199,7 +175,6 @@ SPECS_PHP_CS_FIXER = {
         ],
     },
     "8331": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -207,7 +182,6 @@ SPECS_PHP_CS_FIXER = {
         ],
     },
     "8075": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -215,7 +189,6 @@ SPECS_PHP_CS_FIXER = {
         ],
     },
     "8064": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -223,7 +196,6 @@ SPECS_PHP_CS_FIXER = {
         ],
     },
     "7998": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -231,7 +203,6 @@ SPECS_PHP_CS_FIXER = {
         ],
     },
     "7875": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -239,7 +210,6 @@ SPECS_PHP_CS_FIXER = {
         ],
     },
     "7635": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -247,7 +217,6 @@ SPECS_PHP_CS_FIXER = {
         ],
     },
     "7523": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -255,7 +224,6 @@ SPECS_PHP_CS_FIXER = {
         ],
     },
     "8256": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -263,7 +231,6 @@ SPECS_PHP_CS_FIXER = {
         ],
     },
     "7663": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -274,7 +241,6 @@ SPECS_PHP_CS_FIXER = {
 
 SPECS_CARBON = {
     "3103": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -282,7 +248,6 @@ SPECS_CARBON = {
         ],
     },
     "3098": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -290,7 +255,6 @@ SPECS_CARBON = {
         ],
     },
     "3073": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -298,7 +262,6 @@ SPECS_CARBON = {
         ],
     },
     "3041": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -306,7 +269,6 @@ SPECS_CARBON = {
         ],
     },
     "3005": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -314,7 +276,6 @@ SPECS_CARBON = {
         ],
     },
     "2981": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -322,7 +283,6 @@ SPECS_CARBON = {
         ],
     },
     "2813": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         # Patch involves adding a new dependency, so we need to re-install
@@ -332,7 +292,6 @@ SPECS_CARBON = {
         ],
     },
     "2752": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -340,7 +299,6 @@ SPECS_CARBON = {
         ],
     },
     "2665": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
@@ -348,7 +306,6 @@ SPECS_CARBON = {
         ],
     },
     "2762": {
-        "base_docker_specs": {"php_version": "8.3.16"},
         "docker_specs": {"php_version": "8.3.16"},
         "install": ["composer update", "composer install"],
         "test_cmd": [
