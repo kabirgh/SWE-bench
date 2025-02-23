@@ -28,11 +28,10 @@ def make_repo_script_list_common(
     """
     setup_commands = [
         f"git clone -o origin https://github.com/{repo} {repo_directory}",
+        f"chmod -R 777 {repo_directory}",  # So nonroot user can run tests
         f"cd {repo_directory}",
         f"git reset --hard {base_commit}",
-        f"chmod -R 777 {repo_directory}",  # So nonroot user can run tests
-        # Remove the remote so the agent won't see newer commits.
-        "git remote remove origin",
+        "git remote remove origin", # Remove the remote so the agent won't see newer commits.
     ]
     if "install" in specs:
         setup_commands.extend(specs["install"])
