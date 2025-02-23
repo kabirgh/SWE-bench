@@ -46,14 +46,10 @@ def get_dockerfile_base(platform, arch, language, **kwargs):
 def get_dockerfile_env(platform, arch, language, base_image_key, **kwargs):
     # Some languages do not have an environment Dockerfile. In those cases, the
     # base Dockerfile is used as the environment Dockerfile.
-    if language in _DOCKERFILE_ENV:
-        return _DOCKERFILE_ENV[language].format(
-            platform=platform, arch=arch, base_image_key=base_image_key, **kwargs
-        )
-    else:
-        return _DOCKERFILE_BASE[language].format(
-            platform=platform, arch=arch, base_image_key=base_image_key, **kwargs
-        )
+    dockerfile = _DOCKERFILE_ENV.get(language, _DOCKERFILE_BASE[language])
+    return dockerfile.format(
+        platform=platform, arch=arch, base_image_key=base_image_key, **kwargs
+    )
 
 
 def get_dockerfile_instance(platform, language, env_image_name):

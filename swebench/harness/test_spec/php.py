@@ -1,4 +1,4 @@
-from swebench.harness.test_spec.common import (
+from swebench.harness.test_spec.utils import (
     make_env_script_list_common,
     make_eval_script_list_common,
     make_repo_script_list_common,
