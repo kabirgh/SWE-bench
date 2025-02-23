@@ -10,9 +10,15 @@ from swebench.harness.dockerfiles.python import (
     _DOCKERFILE_INSTANCE_PY,
 )
 
+from swebench.harness.dockerfiles.php import (
+    _DOCKERFILE_BASE_PHP,
+    _DOCKERFILE_INSTANCE_PHP,
+)
+
 _DOCKERFILE_BASE = {
     "py": _DOCKERFILE_BASE_PY,
     "js": _DOCKERFILE_BASE_JS,
+    "php": _DOCKERFILE_BASE_PHP,
 }
 
 _DOCKERFILE_ENV = {
@@ -23,6 +29,7 @@ _DOCKERFILE_ENV = {
 _DOCKERFILE_INSTANCE = {
     "py": _DOCKERFILE_INSTANCE_PY,
     "js": _DOCKERFILE_INSTANCE_JS,
+    "php": _DOCKERFILE_INSTANCE_PHP,
 }
 
 
@@ -37,11 +44,11 @@ def get_dockerfile_base(platform, arch, language, **kwargs):
 
 
 def get_dockerfile_env(platform, arch, language, base_image_key, **kwargs):
-    return _DOCKERFILE_ENV[language].format(
-        platform=platform,
-        arch=arch,
-        base_image_key=base_image_key,
-        **kwargs,
+    # Some languages do not have an environment Dockerfile. In those cases, the
+    # base Dockerfile is used as the environment Dockerfile.
+    dockerfile = _DOCKERFILE_ENV.get(language, _DOCKERFILE_BASE[language])
+    return dockerfile.format(
+        platform=platform, arch=arch, base_image_key=base_image_key, **kwargs
     )
 
 
