@@ -8,14 +8,20 @@ from swebench.harness.utils import get_modified_files
 
 # MARK: Test Command Creation Functions
 
+
 def get_test_cmds(instance) -> list:
-    test_cmd = MAP_REPO_VERSION_TO_SPECS[instance["repo"]][instance["version"]]["test_cmd"]
+    test_cmd = MAP_REPO_VERSION_TO_SPECS[instance["repo"]][instance["version"]][
+        "test_cmd"
+    ]
     return [test_cmd] if isinstance(test_cmd, str) else test_cmd
 
 
 # MARK: Script Creation Functions
 
-def make_repo_script_list_common(specs, repo, repo_directory, base_commit, env_name) -> list:
+
+def make_repo_script_list_common(
+    specs, repo, repo_directory, base_commit, env_name
+) -> list:
     """
     Create a list of bash commands to set up the repository for testing.
     This is the setup script for the instance image.
@@ -26,7 +32,7 @@ def make_repo_script_list_common(specs, repo, repo_directory, base_commit, env_n
         f"git reset --hard {base_commit}",
         f"chmod -R 777 {repo_directory}",  # So nonroot user can run tests
         # Remove the remote so the agent won't see newer commits.
-        f"git remote remove origin",
+        "git remote remove origin",
     ]
     if "install" in specs:
         setup_commands.extend(specs["install"])
@@ -42,12 +48,14 @@ def make_env_script_list_common(instance, specs, env_name) -> list:
     if "apt-pkgs" in specs:
         reqs_commands += [
             "apt-get update",
-            f"apt-get install -y {' '.join(specs['apt-pkgs'])}"
+            f"apt-get install -y {' '.join(specs['apt-pkgs'])}",
         ]
     return reqs_commands
 
 
-def make_eval_script_list_common(instance, specs, env_name, repo_directory, base_commit, test_patch) -> list:
+def make_eval_script_list_common(
+    instance, specs, env_name, repo_directory, base_commit, test_patch
+) -> list:
     """
     Applies the test patch and runs the tests.
     """
@@ -57,11 +65,9 @@ def make_eval_script_list_common(instance, specs, env_name, repo_directory, base
     if test_files:
         reset_tests_command = f"git checkout {base_commit} {' '.join(test_files)}"
     else:
-        reset_tests_command = f'echo "No test files to reset"'
+        reset_tests_command = 'echo "No test files to reset"'
 
-    apply_test_patch_command = (
-        f"git apply --verbose --reject - <<'{HEREDOC_DELIMITER}'\n{test_patch}\n{HEREDOC_DELIMITER}"
-    )
+    apply_test_patch_command = f"git apply --verbose --reject - <<'{HEREDOC_DELIMITER}'\n{test_patch}\n{HEREDOC_DELIMITER}"
     test_commands = get_test_cmds(instance)
     eval_commands = [
         f"cd {repo_directory}",
