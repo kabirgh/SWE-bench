@@ -37,6 +37,10 @@ def parse_log_phpunit(log: str, test_spec: TestSpec) -> dict[str, str]:
 
     return test_status_map
 
+
 MAP_REPO_TO_PARSER_PHP = {
     "phpoffice/phpspreadsheet": parse_log_phpunit,
+    "laravel/framework": parse_log_phpunit,
+    "php-cs-fixer/php-cs-fixer": parse_log_phpunit,
+    "briannesbitt/carbon": parse_log_phpunit,
 }
