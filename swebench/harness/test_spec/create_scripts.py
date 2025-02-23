@@ -13,12 +13,12 @@ from swebench.harness.test_spec.python import (
     make_env_script_list_py,
     make_eval_script_list_py,
 )
-from swebench.harness.constants import MAP_REPO_TO_EXT
 from swebench.harness.test_spec.rust import (
     make_env_script_list_rust,
     make_eval_script_list_rust,
     make_repo_script_list_rust,
 )
+from swebench.harness.constants import MAP_REPO_TO_EXT
 
 
 def make_repo_script_list(specs, repo, repo_directory, base_commit, env_name) -> list:
@@ -31,7 +31,7 @@ def make_repo_script_list(specs, repo, repo_directory, base_commit, env_name) ->
         "js": make_repo_script_list_js,
         "php": make_repo_script_list_php,
         "py": make_repo_script_list_py,
-        "rust": make_repo_script_list_rust,
+        "rs": make_repo_script_list_rust,
     }[ext]
     return func(specs, repo, repo_directory, base_commit, env_name)
 
@@ -46,7 +46,7 @@ def make_env_script_list(instance, specs, env_name) -> list:
         "js": make_env_script_list_js,
         "php": make_env_script_list_php,
         "py": make_env_script_list_py,
-        "rust": make_env_script_list_rust,
+        "rs": make_env_script_list_rust,
     }[ext]
     return func(instance, specs, env_name)
 
@@ -62,6 +62,6 @@ def make_eval_script_list(
         "js": make_eval_script_list_js,
         "php": make_eval_script_list_php,
         "py": make_eval_script_list_py,
-        "rust": make_eval_script_list_rust,
+        "rs": make_eval_script_list_rust,
     }[ext]
     return func(instance, specs, env_name, repo_directory, base_commit, test_patch)

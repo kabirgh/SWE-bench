@@ -22,7 +22,7 @@ MAP_REPO_TO_EXT = {
     **{k: "js" for k in MAP_REPO_VERSION_TO_SPECS_JS.keys()},
     **{k: "php" for k in MAP_REPO_VERSION_TO_SPECS_PHP.keys()},
     **{k: "py" for k in MAP_REPO_VERSION_TO_SPECS_PY.keys()},
-    **{k: "rust" for k in MAP_REPO_VERSION_TO_SPECS_RUST.keys()},
+    **{k: "rs" for k in MAP_REPO_VERSION_TO_SPECS_RUST.keys()},
 }
 
 LATEST = "latest"
