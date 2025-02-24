@@ -18,7 +18,7 @@ from swebench.harness.test_spec.rust import (
     make_eval_script_list_rust,
     make_repo_script_list_rust,
 )
-from swebench.harness.constants import MAP_REPO_TO_EXT
+from swebench.harness.test_spec.constants import MAP_REPO_TO_EXT
 
 
 def make_repo_script_list(specs, repo, repo_directory, base_commit, env_name) -> list:

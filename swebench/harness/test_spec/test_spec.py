@@ -8,12 +8,14 @@ from typing import Any, Optional, Union, cast
 from swebench.harness.constants import (
     DEFAULT_DOCKER_SPECS,
     KEY_INSTANCE_ID,
+    SWEbenchInstance,
+)
+from swebench.harness.test_spec.constants import (
     LATEST,
     MAP_REPO_TO_EXT,
     MAP_REPO_VERSION_TO_SPECS,
     USE_X86,
 )
-from swebench.harness.constants.constants import SWEbenchInstance
 from swebench.harness.dockerfiles import (
     get_dockerfile_base,
     get_dockerfile_env,

@@ -3,11 +3,11 @@ from typing import Any
 from swebench.harness.constants import (
     APPLY_PATCH_FAIL,
     END_TEST_OUTPUT,
+    FAIL_ONLY_REPOS,
     FAIL_TO_FAIL,
     FAIL_TO_PASS,
     KEY_INSTANCE_ID,
     KEY_PREDICTION,
-    MAP_REPO_VERSION_TO_SPECS,
     PASS_TO_FAIL,
     PASS_TO_PASS,
     RESET_FAILED,
@@ -18,11 +18,18 @@ from swebench.harness.constants import (
     ResolvedStatus,
     TestStatus,
 )
+from swebench.harness.test_spec.constants import MAP_REPO_VERSION_TO_SPECS
 from swebench.harness.test_spec.test_spec import TestSpec
-from swebench.harness.log_parsers import MAP_REPO_TO_PARSER, get_eval_type
+from swebench.harness.log_parsers import MAP_REPO_TO_PARSER
 
 
 # MARK: Utility functions
+def get_eval_type(test_spec: TestSpec) -> EvalType:
+    if test_spec.repo in FAIL_ONLY_REPOS:
+        return EvalType.FAIL_ONLY
+    return EvalType.PASS_AND_FAIL
+
+
 def test_passed(case: str, sm: dict[str, str]) -> bool:
     return case in sm and sm[case] in [TestStatus.PASSED.value, TestStatus.XFAIL.value]
 
@@ -76,7 +83,7 @@ def get_logs_eval(test_spec: TestSpec, log_fp: str) -> tuple[dict[str, str], boo
 
         # Get status map of evaluation results
         content = content.split(test_cmd)[-1]
-        return log_parser(content, test_spec), True
+        return log_parser(content), True
 
 
 def get_eval_tests_report(
