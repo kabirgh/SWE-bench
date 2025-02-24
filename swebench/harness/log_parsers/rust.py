@@ -1,0 +1,32 @@
+import re
+
+from swebench.harness.constants.constants import TestStatus
+from swebench.harness.test_spec.test_spec import TestSpec
+
+
+def parse_log_cargo(log: str, test_spec: TestSpec) -> dict[str, str]:
+    """
+    Args:
+        log (str): log content
+    Returns:
+        dict: test case to test status mapping
+    """
+    test_status_map = {}
+
+    pattern = r"^test\s+(\S+)\s+\.\.\.\s+(\w+)$"
+
+    for line in log.split("\n"):
+        match = re.match(pattern, line.strip())
+        if match:
+            test_name, outcome = match.groups()
+            if outcome == "ok":
+                test_status_map[test_name] = TestStatus.PASSED.value
+            elif outcome == "FAILED":
+                test_status_map[test_name] = TestStatus.FAILED.value
+
+    return test_status_map
+
+
+MAP_REPO_TO_PARSER_RUST = {
+    "burntsushi/ripgrep": parse_log_cargo,
+}

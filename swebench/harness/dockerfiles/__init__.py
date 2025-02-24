@@ -15,10 +15,16 @@ from swebench.harness.dockerfiles.php import (
     _DOCKERFILE_INSTANCE_PHP,
 )
 
+from swebench.harness.dockerfiles.rust import (
+    _DOCKERFILE_BASE_RUST,
+    _DOCKERFILE_INSTANCE_RUST,
+)
+
 _DOCKERFILE_BASE = {
     "py": _DOCKERFILE_BASE_PY,
     "js": _DOCKERFILE_BASE_JS,
     "php": _DOCKERFILE_BASE_PHP,
+    "rs": _DOCKERFILE_BASE_RUST,
 }
 
 _DOCKERFILE_ENV = {
@@ -30,6 +36,7 @@ _DOCKERFILE_INSTANCE = {
     "py": _DOCKERFILE_INSTANCE_PY,
     "js": _DOCKERFILE_INSTANCE_JS,
     "php": _DOCKERFILE_INSTANCE_PHP,
+    "rs": _DOCKERFILE_INSTANCE_RUST,
 }
 
 
