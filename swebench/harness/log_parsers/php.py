@@ -1,8 +1,8 @@
 import re
 from swebench.harness.constants.constants import TestStatus
-from swebench.harness.test_spec.test_spec import TestSpec
 
-def parse_log_phpunit(log: str, test_spec: TestSpec) -> dict[str, str]:
+
+def parse_log_phpunit(log: str) -> dict[str, str]:
     """
     Parser for phpunit logs with the --testdox option.
     Args:

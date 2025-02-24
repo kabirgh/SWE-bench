@@ -4,7 +4,7 @@ from swebench.harness.constants.constants import TestStatus
 from swebench.harness.test_spec.test_spec import TestSpec
 
 
-def parse_log_cargo(log: str, test_spec: TestSpec) -> dict[str, str]:
+def parse_log_cargo(log: str) -> dict[str, str]:
     """
     Args:
         log (str): log content
