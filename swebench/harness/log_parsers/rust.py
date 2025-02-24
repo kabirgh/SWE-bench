@@ -1,7 +1,6 @@
 import re
 
-from swebench.harness.constants.constants import TestStatus
-from swebench.harness.test_spec.test_spec import TestSpec
+from swebench.harness.constants import TestStatus
 
 
 def parse_log_cargo(log: str) -> dict[str, str]:

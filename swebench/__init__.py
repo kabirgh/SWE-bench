@@ -8,7 +8,6 @@ from swebench.harness.constants import (
     KEY_INSTANCE_ID,
     KEY_MODEL,
     KEY_PREDICTION,
-    MAP_REPO_VERSION_TO_SPECS,
 )
 
 from swebench.harness.docker_build import (
@@ -45,6 +44,11 @@ from swebench.harness.log_parsers import (
 
 from swebench.harness.run_evaluation import (
     main as run_evaluation,
+)
+
+from swebench.harness.test_spec.constants import (
+    MAP_REPO_TO_INSTALL,
+    MAP_REPO_VERSION_TO_SPECS,
 )
 
 from swebench.harness.utils import (

@@ -1,7 +1,6 @@
 import re
 
 from swebench.harness.constants import TestStatus
-from swebench.harness.test_spec.test_spec import TestSpec
 
 
 def parse_log_pytest(log: str) -> dict[str, str]:

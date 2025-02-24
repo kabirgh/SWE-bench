@@ -1,6 +1,6 @@
 import re
 
-from swebench.harness.constants.constants import TestStatus
+from swebench.harness.constants import TestStatus
 from swebench.harness.log_parsers.utils import ansi_escape
 
 

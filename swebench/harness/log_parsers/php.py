@@ -1,5 +1,5 @@
 import re
-from swebench.harness.constants.constants import TestStatus
+from swebench.harness.constants import TestStatus
 
 
 def parse_log_phpunit(log: str) -> dict[str, str]:
