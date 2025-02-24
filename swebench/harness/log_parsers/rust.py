@@ -29,4 +29,10 @@ def parse_log_cargo(log: str, test_spec: TestSpec) -> dict[str, str]:
 
 MAP_REPO_TO_PARSER_RUST = {
     "burntsushi/ripgrep": parse_log_cargo,
+    "sharkdp/bat": parse_log_cargo,
+    "astral-sh/ruff": parse_log_cargo,
+    "tokio-rs/tokio": parse_log_cargo,
+    "uutils/coreutils": parse_log_cargo,
+    "nushell/nushell": parse_log_cargo,
+    "tokio-rs/axum": parse_log_cargo,
 }
